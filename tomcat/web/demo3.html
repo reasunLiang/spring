@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    window.onload = function () {
+        var elementById = document.getElementById("change");
+        elementById.onclick = function () {
+            var time = new Date().getTime();
+            elementById.src = "/checkCode?" + time;
+        }
+    }
+
+    window.onload = function () {
+        let elementById = document.getElementById("checkCode");
+        elementById.onclick = function () {
+            var time = new Date().getTime();
+            elementById.src = "/checkCode?" + time;
+        }
+    }
+</script>
+<body>
+<form action="demo3" method="post">
+    <input name="username" type="text">
+    <input type="submit" value="提交">
+    <img id="checkCode" src="/checkCode"/>
+
+    <a href="" id="change">看不清换一张</a>
+</form>
+
+</body>
+</html>

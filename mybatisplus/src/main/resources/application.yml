@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.218.75:3306/lyx?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+
+server:
+  servlet:
+    context-path: "/"
+  port: 80
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-enums-package:
+    com.lyx.mybatisplus.enums
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath:com/lyx/mybatisplus/**.xml
